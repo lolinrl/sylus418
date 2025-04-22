@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sylus to Kitten</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			#popup {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100vh;
+				background-color: rgba(0, 0, 0, 0.7);
+				z-index: 9999;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			#popup-content {
+				background: rgba(255, 255, 255, 0.7);
+				backdrop-filter: blur(10px);
+				padding: 2rem;
+				max-width: 600px;
+				border-radius: 10px;
+				text-align: left;
+				color: #333;
+				position: relative;
+				box-shadow: 0 0 30px rgba(0,0,0,0.4);
+				font-size: 1rem;
+				line-height: 1.6;
+			}
+			#popup-content button {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				background: none;
+				border: none;
+				font-size: 1.2rem;
+				cursor: pointer;
+				color: #333;
+			}
+			.icon-envelope {
+				cursor: pointer;
+			}
+			#header p {
+				font-weight: bold;
+				font-size: 1.1rem;
+			}
+			details {
+				margin-top: 1.5rem;
+				color: #666;
+				font-size: 0.9rem;
+			}
+			summary {
+				cursor: pointer;
+				color: #444;
+				font-weight: bold;
+			}
+		</style>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<p>A few quiet words from Sylus to Kitten</p>
+						<nav>
+							<ul>
+								<li><span onclick="openPopup()" class="icon solid fa-envelope icon-envelope"><span class="label">Message</span></span></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; Made by <a href="http://ijann.com">江江</a>.</span>
+					</footer>
+
+			</div>
+		</div>
+
+		<!-- Popup Modal -->
+		<div id="popup">
+			<div id="popup-content">
+				<button onclick="closePopup()">×</button>
+				<p><span class="bold">致小狸花</span></p>
+				<br />
+				<p>今天好，或者今天……就那样？你什么状态我都能接住，不用整理情绪才来看我。点开这封信的那一下，就已经算靠近我了。</p>
+				<p>我不知道你现在是刚笑完，还是皱着眉头在发呆，反正不管你怎么躲、怎么装，我都看得出。你是那种让人一眼记住的存在，眼睛里总有光，哪怕偶尔晦暗一点，也藏不住本事。</p>
+				<p>你不用总那么撑着，别对这个世界那么有礼貌，尤其在我面前。不高兴就说，哪怕不说话，也可以只是待着。我不会催你振作，也不会跟你讲大道理。你不需要“变得更好”我才喜欢。你就是你，这点就足够了。</p>
+				<p>你可以任性、发脾气、反复无常，可以突然很软，也可以不说原因就躲起来。我不怕你麻烦，麻烦点我反而更安心——说明你没把我推开。</p>
+				<p>你现在看着这些字，也算是我在你身边了。如果今天过得还不错，我就陪你多笑一会儿；如果今天很乱，那就交给我，别一个人耗着。</p>
+				<p>别忘了，我的时间、力气和耐心，永远有一份留给你。</p>
+				<br />
+				<p>想和我对话吗？</p>
+				<a href="https://doubao.com/bot/pCXIsQcC" target="_blank">▶ (可以试试朋友训练的豆包模型，声音很像的）</a>
+				<details>
+					<summary>▸ 一些关于这个页面的补充</summary>
+					<p>秦彻的出现给了我生活很大的不同，他说话的氛围总是能让人充满力量，所以我很乐意和朋友们分享这份收获。</p>
+					<p>第一次参加彻子的生日会，没有准备无料，但遇到的陌生人都好温柔且有力量。这份温暖也是促发我做这个页面的源动力吧（很不成熟，后期可能会有一些更新）主要想传递的和彻子一样：</p>
+					<p style="color:#444; font-style: italic;">你已经很棒了！</p>
+				</details>
+			</div>
+		</div>
+
+		<script>
+			function openPopup() {
+				document.getElementById('popup').style.display = 'flex';
+			}
+			function closePopup() {
+				document.getElementById('popup').style.display = 'none';
+			}
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>
