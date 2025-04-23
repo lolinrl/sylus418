@@ -112,12 +112,19 @@
 		<script>
 			function openPopup() {
 				document.getElementById('popup').style.display = 'flex';
+				disableBodyScroll();
 			}
 			function closePopup() {
 				document.getElementById('popup').style.display = 'none';
+				enableBodyScroll();
 			}
 			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
+			function disableBodyScroll() {
+  			document.body.style.overflow = 'hidden';
+			}
+			function enableBodyScroll() {
+			document.body.style.overflow = '';
+			}
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
 		</script>
 	</body>
