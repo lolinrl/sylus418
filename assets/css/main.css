@@ -1090,6 +1090,6 @@ input, select, textarea {
 
 		#popup-content {
 			/* ...原有样式... */
-			max-height: 90vh;
+			max-height: 50vh;
 			overflow-y: auto;
 		  }
