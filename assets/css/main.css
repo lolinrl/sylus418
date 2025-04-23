@@ -1087,3 +1087,9 @@ input, select, textarea {
 		#header nav {
 			padding: 0 1em;
 		} }
+
+		#popup-content {
+			/* ...原有样式... */
+			max-height: 90vh;
+			overflow-y: auto;
+		  }
